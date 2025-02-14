@@ -1,7 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Hosting;
-using System;
-using System.Reflection.Metadata;
 using Wafi.SampleTest.Entities;
 
 namespace Wafi.SampleTest
