@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Wafi.SampleTest.Entities
+namespace Wafi.Api.Entities
 {
     public class Car
     {

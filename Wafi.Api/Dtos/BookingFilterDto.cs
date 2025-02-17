@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Wafi.SampleTest.Dtos
+namespace Wafi.Api.Dtos
 {
     public class BookingFilterDto
     {

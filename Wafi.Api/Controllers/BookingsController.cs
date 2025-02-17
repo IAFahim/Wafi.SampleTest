@@ -1,14 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Globalization;
-using Microsoft.IdentityModel.Tokens;
-using Wafi.Api;
-using Wafi.SampleTest.Dtos;
-using Wafi.SampleTest.Entities;
-using Wafi.SampleTest.Services;
+using Wafi.Api.Dtos;
+using Wafi.Api.Services;
 
-namespace Wafi.SampleTest.Controllers
+namespace Wafi.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -18,13 +12,12 @@ namespace Wafi.SampleTest.Controllers
         [HttpGet("Booking")]
         [ProducesResponseType(typeof(List<BookingCalendarDto>), StatusCodes.Status200OK)]
         public async Task<ActionResult<List<BookingCalendarDto>>> GetCalendarBookings(
-            [FromQuery] Guid? bookingId,
             [FromQuery] Guid? carId,
             [FromQuery] DateOnly? start,
             [FromQuery] DateOnly? end
         )
         {
-            var bookings = await bookingService.GetCalendarBookings(bookingId, carId, start, end);
+            var bookings = await bookingService.GetCalendarBookings(carId, start, end);
             return Ok(bookings);
         }
 
@@ -48,7 +41,5 @@ namespace Wafi.SampleTest.Controllers
             var seedData = await bookingService.GetSeedData();
             return Ok(seedData);
         }
-
-
     }
 }

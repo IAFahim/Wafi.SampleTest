@@ -1,6 +1,6 @@
-﻿using Wafi.SampleTest.Entities;
+﻿using Wafi.Api.Entities;
 
-namespace Wafi.SampleTest.Dtos
+namespace Wafi.Api.Dtos
 {
     public record BookingCalendarDto
     {
@@ -33,6 +33,24 @@ namespace Wafi.SampleTest.Dtos
             var dots = new List<BookingCalendarDto>(bookings.Count);
             foreach (var t in bookings) dots.Add(ToDto(t));
             return dots;
+        }
+
+
+        public override string ToString()
+        {
+            string daysOfWeekString = DaysToRepeatOn.HasValue ? DaysToRepeatOn.Value.ToString() : "None";
+            string carString = $"Car: {Car.Make} {Car.Model} (Id: {Car.Id})";
+
+            return $$"""
+                     BookingCalendarDto {
+                         BookingDate: {{BookingDate:yyyy-MM-dd}},
+                         StartTime: {{StartTime:c}},
+                         EndTime: {{EndTime:c}}, 
+                         RepeatOption: {{RepeatOption}},
+                         DaysToRepeatOn: {{daysOfWeekString}},
+                         {{carString}}
+                     }
+                     """;
         }
     }
 }

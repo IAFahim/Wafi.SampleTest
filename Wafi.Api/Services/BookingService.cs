@@ -1,17 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Wafi.Api;
-using Wafi.SampleTest.Dtos;
-using Wafi.SampleTest.Entities;
+using Wafi.Api.Dtos;
+using Wafi.Api.Entities;
 
-namespace Wafi.SampleTest.Services;
+namespace Wafi.Api.Services;
 
 public class BookingService(WafiDbContext context) : IBookingService
 {
-    public async Task<List<BookingCalendarDto>> GetCalendarBookings(Guid? bookingId, Guid? carId, DateOnly? start,
+    public async Task<List<BookingCalendarDto>> GetCalendarBookings(Guid? carId, DateOnly? start,
         DateOnly? end)
     {
         var query = context.Bookings.Include(b => b.Car).AsQueryable();
-        query = query.Where((booking) => booking.Id == bookingId);
+        query = query.Where((booking) => true);
         var bookings = await query.ToListAsync();
         return BookingCalendarDto.ToDots(bookings);
     }

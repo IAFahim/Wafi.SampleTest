@@ -1,15 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using System.Globalization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.SwaggerGen;
 using Wafi.Api;
-using Wafi.SampleTest;
-using Wafi.SampleTest.Exceptions;
-using Wafi.SampleTest.Services;
+using Wafi.Api.Services;
 
 // using Wafi.SampleTest.Converters;
 

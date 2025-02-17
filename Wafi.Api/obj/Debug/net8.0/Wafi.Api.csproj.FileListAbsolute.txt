@@ -12,11 +12,7 @@ D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\Wafi.Api.AssemblyInfoInputs.cache
 D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\Wafi.Api.AssemblyInfo.cs
 D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\Wafi.Api.csproj.CoreCompileInputs.cache
 D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\Wafi.Api.MvcApplicationPartsAssemblyInfo.cache
-D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\Wafi.Api.RazorAssemblyInfo.cache
-D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\Wafi.Api.RazorAssemblyInfo.cs
-D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\scopedcss\bundle\Wafi.Api.styles.css
-D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\scopedcss\projectbundle\Wafi.Api.bundle.scp.css
 D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\staticwebassets.build.json
 D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\staticwebassets.development.json
 D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
@@ -149,3 +145,4 @@ D:\DotNet\Wafi\Wafi.Api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.
 D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\Wafi.Api.csproj.AssemblyReference.cache
 D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\Wafi.Api.MvcApplicationPartsAssemblyInfo.cs
 D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\Wafi.Api.csproj.Up2Date
+D:\DotNet\Wafi\Wafi.Api\obj\Debug\net8.0\Wafi.Api.sourcelink.json

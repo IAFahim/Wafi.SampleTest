@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Wafi.SampleTest.Entities;
+using Wafi.Api.Entities;
 
 namespace Wafi.Api
 {

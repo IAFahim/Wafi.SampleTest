@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Wafi.SampleTest.Entities;
+using Wafi.Api.Entities;
 
-namespace Wafi.SampleTest.Dtos
+namespace Wafi.Api.Dtos
 {
     public class CreateUpdateBookingDto
     {
