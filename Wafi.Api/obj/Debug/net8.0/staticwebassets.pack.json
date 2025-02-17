@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\DotNet\\Wafi\\Wafi.Api\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Wafi.Api.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Wafi.Api.n7wez054j8.bundle.scp.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Wafi.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Wafi.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Wafi.Api.props",
+      "PackagePath": "build\\Wafi.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Wafi.Api.props",
+      "PackagePath": "buildMultiTargeting\\Wafi.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Wafi.Api.props",
+      "PackagePath": "buildTransitive\\Wafi.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
