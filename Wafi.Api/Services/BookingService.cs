@@ -10,7 +10,7 @@ public class BookingService(WafiDbContext context) : IBookingService
         DateOnly? end)
     {
         var query = context.Bookings.Include(b => b.Car).AsQueryable();
-        query = query.Where((booking) => true);
+        query = query.Where((booking) => booking.CarId == carId);
         var bookings = await query.ToListAsync();
         return BookingCalendarDto.ToDots(bookings);
     }
