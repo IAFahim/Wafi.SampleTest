@@ -3,9 +3,8 @@ using Wafi.SampleTest.Entities;
 
 namespace Wafi.SampleTest
 {
-    public class WafiDbContext : DbContext
+    public class WafiDbContext(DbContextOptions<WafiDbContext> options) : DbContext(options)
     {
-        public WafiDbContext(DbContextOptions<WafiDbContext> options) : base(options) { }
         public DbSet<Booking> Bookings { get; set; }
 
         public DbSet<Car> Cars { get; set; }

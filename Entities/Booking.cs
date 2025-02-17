@@ -5,6 +5,7 @@ namespace Wafi.SampleTest.Entities
 {
     public class Booking
     {
+        [Key]
         public Guid Id { get; set; }
 
         [Required]

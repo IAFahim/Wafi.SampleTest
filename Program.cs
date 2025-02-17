@@ -7,7 +7,10 @@ using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Wafi.SampleTest;
-using Wafi.SampleTest.Converters;
+using Wafi.SampleTest.Exceptions;
+using Wafi.SampleTest.Services;
+
+// using Wafi.SampleTest.Converters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,11 +21,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDbContext<WafiDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
-
-builder.Services.AddControllers().AddJsonOptions(options =>
-{
-    options.JsonSerializerOptions.Converters.Add(new DateOnlyJsonConverter());
 });
 
 builder.Services.Configure<RouteOptions>(options =>
@@ -63,7 +61,7 @@ builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-        options.JsonSerializerOptions.Converters.Add(new DateOnlyJsonConverter());
+        // options.JsonSerializerOptions.Converters.Add(new DateOnlyJsonConverter());
         options.JsonSerializerOptions.WriteIndented = true;
         options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
     });
@@ -72,6 +70,9 @@ builder.Services.AddResponseCompression(options =>
 {
     options.EnableForHttps = true;
 });
+
+
+builder.Services.AddScoped<IBookingService, BookingService>();
 
 var app = builder.Build();
 
@@ -82,13 +83,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
 
+// app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.Run();
 
 
